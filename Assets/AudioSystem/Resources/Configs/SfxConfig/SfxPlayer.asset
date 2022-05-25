@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a719d94603a84ba08fd622be6d3a8ce0, type: 3}
+  m_Name: SfxPlayer
+  m_EditorClassIdentifier: 
+  audioMinValue: -80
+  audioMaxValue: 20
+  musicVolumeExposedName: MusicVolume
+  sfxGVolumeExposedName: SfxVolume
+  audioMixer: {fileID: 24100000, guid: fee17a2388e8743fea8ab62ebd6e9b81, type: 2}
+  sfxConfigs:
+  - name: WrongMov e
+    clip: {fileID: 8300000, guid: f31a058ec924a41939e704c122ec097b, type: 3}
+    volume: 1
+  musicConfigs:
+  - name: Music1
+    clip: {fileID: 8300000, guid: 1f7e78a6772af46229549785dc79b710, type: 3}
+    volume: 1
+    loop: 1
