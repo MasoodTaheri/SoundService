@@ -6,8 +6,6 @@ using Random = UnityEngine.Random;
 
 namespace AudioSystem
 {
-    
-
     [CreateAssetMenu(fileName = "SfxPlayer", menuName = "AudioSystem/SfxPlayer")]
     public partial class SoundManager : ScriptableObject
     {
@@ -23,13 +21,13 @@ namespace AudioSystem
 
         [Space, Header("Music List")] [SerializeField]
         private List<MusicConfig> musicConfigs = new List<MusicConfig>();
-        private SoundPlayer soundPlayer;
+        private SoundPlayer _soundPlayer;
 
         private string _currentMusicName;
 
         public void Setup()
         {
-            soundPlayer = new SoundPlayer(2);
+            _soundPlayer = new SoundPlayer(2);
         }
 
         public void Play(string sound, Action onEnd = null)
@@ -38,7 +36,7 @@ namespace AudioSystem
             if (clipConfig != null)
             {
                 AudioClip cip = clipConfig.clip;
-                soundPlayer.Play(cip,clipConfig.volume,onEnd);
+                _soundPlayer.Play(cip,clipConfig.volume,onEnd);
             }
         }
 
@@ -50,7 +48,7 @@ namespace AudioSystem
 
         public void StopMusic()
         {
-            soundPlayer.Stop(musicConfigs.Find(x => x.name == _currentMusicName).clip);
+            _soundPlayer.Stop(musicConfigs.Find(x => x.name == _currentMusicName).clip);
         }
 
 

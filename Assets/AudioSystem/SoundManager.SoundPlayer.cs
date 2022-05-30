@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-// using DG.Tweening;
 using UnityEngine;
 
 namespace AudioSystem
@@ -10,7 +9,7 @@ namespace AudioSystem
     {
         private class SoundPlayer
         {
-            private List<AudioSource> _audioSources;
+            private readonly List<AudioSource> _audioSources;
             private readonly GameObject _audioSourceHolder;
 
             public SoundPlayer(int initSoundChannel)

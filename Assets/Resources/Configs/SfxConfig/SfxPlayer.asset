@@ -18,11 +18,11 @@ MonoBehaviour:
   sfxGVolumeExposedName: SfxVolume
   audioMixer: {fileID: 24100000, guid: fee17a2388e8743fea8ab62ebd6e9b81, type: 2}
   sfxConfigs:
-  - name: WrongMov e
-    clip: {fileID: 8300000, guid: f31a058ec924a41939e704c122ec097b, type: 3}
+  - name: CompleteGame
+    clip: {fileID: 8300000, guid: e77f2612387a9cf4392829b73bb876bc, type: 3}
     volume: 1
   musicConfigs:
   - name: Music1
-    clip: {fileID: 8300000, guid: 1f7e78a6772af46229549785dc79b710, type: 3}
+    clip: {fileID: 8300000, guid: 626562e117e5a7f4ea2a5ffadde4c7e2, type: 3}
     volume: 1
     loop: 1

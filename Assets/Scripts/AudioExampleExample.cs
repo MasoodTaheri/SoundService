@@ -12,25 +12,15 @@ namespace AudioSystem
         private void Awake()
         {
             soundManager.Setup();
-//#if AUDIO_PLAYER
-            soundManager.Play("");
-//#endif
         }
 
         private void Update()
         {
-//#if AUDIO_PLAYER
             if (Input.GetKeyDown(KeyCode.M))
             {
                 _mute = !_mute;
-                //sfxPlayer.SetMute(Channels.MusicChannel, _mute);
+                soundManager.Play("CompleteGame");
             }
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                //sfxPlayer.Play(Sounds.CardFlick_1, () => { Debug.Log($"Played : {Sounds.CardFlick_1}"); });
-            }
-//#endif
         }
     }
 }
